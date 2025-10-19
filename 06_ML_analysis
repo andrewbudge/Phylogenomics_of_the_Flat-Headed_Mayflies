@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# create dir.
+mkdir -p analysis/smatrix analysis/phylo_DNA12 analysis/phylo_AA
+
+# smatrix analysis
+iqtree3 -s data/final/heptageniidae_smatrix.fas -m MIX+MFP -nt AUTO -bb 1000
+mv data/final/heptageniidae_smatrix.fas.* analysis/smatrix
+
+# phylo DNA12 analysis
+iqtree3 -s data/phylogenomic/phylogenomic_DNA12.fa -m MIX+MFP -nt AUTO -bb 1000
+mv data/phylogenomic/phylogenomic_DNA12.fa.* analysis/phylo_DNA12
+
+# phylo AA analysis
+iqtree3 -s data/phylogenomic/phylogenomic_AA.fas -nt AUTO -bb 1000
+mv data/phylogenomic/phylogenomic_DNA12.fa.* analysis/phylo_AA
