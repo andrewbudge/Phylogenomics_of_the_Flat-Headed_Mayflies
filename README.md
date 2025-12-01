@@ -23,7 +23,7 @@ Sequences are aligned with MAFFT (`--auto`) and trimmed with ClipKIT (`smart-gap
 
 ### 5. Build Supermatrix (`05_smatrix.sh`)
 
-Creates a concatenated supermatrix from all aligned genes using Liger. Taxonomic names are standardized to handle synonyms and reclassifications.
+Creates a concatenated supermatrix from all aligned genes using [Liger](https://github.com/andrewbudge/Liger). Taxonomic names are standardized to handle synonyms and reclassifications.
 
 ### 6. Maximum-Likelihood Analysis (`06_ML_analysis.sh`)
 
